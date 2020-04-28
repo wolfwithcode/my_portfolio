@@ -4,15 +4,19 @@
     .site-banner {
         background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
         height: 400px;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
         
     
         .site-title {
             font-family: 'Dancing Script', cursive;
-            padding: 120px;
             color: #14534C;
             width: 100%;
             justify-content: center;
-            padding-left: 12rem;
+            display: flex;
+            flex-direction: column;
         }
 
         .projects_banner {
@@ -35,21 +39,24 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        padding-bottom: 1rem;
+        padding-bottom: 3rem;
 
-        .work-exp {
-            padding: 2rem 0 0 4rem;
-            display: flex;
-    
-            .fa-project-diagram {
-                height: 3rem;
-                background-color: red($color: #000000);
+        .exp{
+            margin-top: 5rem;
+            .work-exp {
+                padding: 0 1rem 0 2rem;
+                display: flex;
+        
+                .fa-project-diagram {
+                    height: 3rem;
+                    background-color: red($color: #000000);
+                }
+        
+                .company {
+                    padding-left: 2rem;
+                }
             }
-    
-            .company {
-                padding-left: 2rem;
-            }
-        }
+        }        
     }    
 
     .skills {
@@ -66,8 +73,11 @@
 
     .about_me {
         .about-content {
-            margin: 3rem 0rem 2rem 5rem;
+            justify-content: center;
             text-align: justify;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 2rem;
 
             p {
                 width: 85%;
@@ -88,16 +98,15 @@
     }
            
     .footer {
-        height: 200px;
+        height: 220px;
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
         
         .contact_details {
             text-align: left;
             padding-top: 2.5rem;
-            // font-family: 'Open Sans', sans-serif;
             font-family: 'Manrope', sans-serif;
             color: #073B4C;
-            font-size: medium;
+            font-size: small;
 
             h4 {
                 color: #073B4C;

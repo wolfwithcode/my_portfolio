@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 const nodemailer = require('nodemailer');
 const path = require('path');
 
@@ -8,6 +9,7 @@ require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(cookieParser());
 
 app.post('/api/form', (req,res) => {
     nodemailer.createTestAccount((err, account) => {
@@ -21,14 +23,14 @@ app.post('/api/form', (req,res) => {
             <h3>Message</h3>
             <p>${req.body.message}</p>
         `
-
+        
         let transporter = nodemailer.createTransport({
             host: 'smtp.gmail.com',
             port: 465,
             secure:true,
             auth: {
                 type: 'OAuth2',
-                user: process.env.USER_NAME,
+                user: process.env.EMAIL,
                 clientId: process.env.CLIENT_ID,
                 clientSecret: process.env.CLIENT_SECRET,
                 refreshToken: process.env.REFRESH_TOKEN,
@@ -38,7 +40,7 @@ app.post('/api/form', (req,res) => {
 
         let emailOptions = {
             from: req.body.email,
-            to: process.env.USER_NAME,
+            to: process.env.EMAIL,
             subject: 'New Message From Portfolio',
             text: req.body.message,
             html: htmlEmail
@@ -46,11 +48,10 @@ app.post('/api/form', (req,res) => {
 
         transporter.sendMail(emailOptions, (err, info) => {
             if(err) {
-                return console.log(err);
+                return res.json({sucess: false})
             }
 
-            console.log('Message sent: %s', info.message);
-            console.log('Message URL: %s', nodemailer.getTestMessageUrl(info));
+            return res.json({success: true})
         })
     })
 });

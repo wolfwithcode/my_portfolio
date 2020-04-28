@@ -43,13 +43,23 @@ class HomePage extends React.Component {
         e.preventDefault();
         const {name, email, phone, message} = this.state;
 
-        const form = await axios.post('/api/form', {
+        await axios.post('/api/form', {
             name,
             email,
             phone,
             message
         })
-        console.log(name);
+        .then(response => {
+            if(response.data.success) {
+                
+                this.props.history.push('/thankyou');
+            } else {
+                this.props.history.push('/error'); 
+            }
+        }) 
+        .catch((err) => {
+            console.error(err);
+        })
     }
 
     render (){
@@ -58,7 +68,7 @@ class HomePage extends React.Component {
                 {/* ====================Start site banner==================== */}
                 <section className='site-banner'>
                     <div className='row'>
-                        <div className="col-lg-6 col-md-12 site-title">
+                        <div className="col-lg-6 col-12 site-title">
                             <h3 className="title-text">Welcome to My Portfolio!</h3>
                             <h1 className="title-text">I am Anh Nguyen</h1>
                             <h4 className="title-text">A Full-stack Web Developer</h4>
@@ -86,35 +96,35 @@ class HomePage extends React.Component {
                 {/* ==================Start Previous Experience============== */}
                 <section className='experience' id={'experience_section'}>
                     <div className='row'>
-                        <div className='col-md-12 section-title'>
+                        <div className='col-12 section-title'>
                             <h1>Education & Previous ICT Experience</h1>
                         </div>
-                        <div className='col-md-12'>
+                        <div className='col-12 exp'>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>2018-present: Freelancer</p>
+                                    <p>2018-present: <strong>Freelancer</strong></p>
                                     <p>Run a small business (online shop) and done some business-web-projects.</p>
                                 </div>
                             </div>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>2017-2018: FECredit</p>
+                                    <p>2017-2018: <strong>FECredit</strong></p>
                                     <p>Reporting & Analysis Specialist (PL/SQL Developer)</p>
                                 </div>
                             </div>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>2016: Robert Bosch Engineering</p>
+                                    <p>2016: <strong>Robert Bosch Engineering</strong></p>
                                     <p>Associate Software Engineer (C++ Developer)</p>
                                 </div>
                             </div>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>Education: University of Cincinnati, Ohio, US</p>
+                                    <p>Education: <strong>University of Cincinnati, Ohio, US</strong></p>
                                     <p>Bachelor of Science in Applied Mathematics - Class of 2015</p>
                                 </div>
                             </div>
@@ -127,10 +137,10 @@ class HomePage extends React.Component {
 
                 <section className='technical' id='technical_section'>
                     <div className='row'>
-                        <div className='col-md-12 section-title'>
+                        <div className='col-12 section-title'>
                             <h1>Technical Skills</h1>
                         </div>
-                        <div className='col-md-12 skills'> 
+                        <div className='col-12 skills'> 
                             {this.state.skills.map((skill, index) => (
                                 <StyleRoot key={index} >
                                     <div className='tech-skill d-inline-block' style={styles.bounce}>
@@ -148,10 +158,10 @@ class HomePage extends React.Component {
                 {/* ==================Start About Me============== */}
                 <section className='about_me' id='about_me_section'>
                     <div className='row'>
-                        <div className='col-md-12 section-title'>
+                        <div className='col-12 section-title'>
                             <h1>About Me</h1>
                         </div>
-                        <div className='col-md-12 about-content'>
+                        <div className='col-12 about-content'>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum rutrum dui, in finibus orci. Sed sed sem nec mi convallis fermentum eu sit amet libero. Proin vitae libero mattis, faucibus dolor ut, dignissim lectus. Integer feugiat nibh ac lacus blandit, vitae consectetur urna bibendum. Vestibulum vitae imperdiet libero. Ut a mauris molestie, vestibulum turpis vel, tincidunt ante. Duis ut mauris quis sem efficitur lacinia et ac turpis. Nam libero metus, pharetra vel quam ut, ullamcorper tempus ante. Maecenas ut efficitur justo. Mauris porta sodales ligula, non porttitor nisl pulvinar sed.
 
                                 Phasellus volutpat blandit ipsum eleifend vulputate. Etiam gravida tempus gravida. Sed lectus turpis, sollicitudin ac nunc ac, lacinia viverra velit. Integer quis elit sollicitudin, condimentum mi aliquet, consectetur justo. Integer vitae eros lectus. Praesent faucibus erat lectus, viverra scelerisque sem interdum maximus. Curabitur et ante ante. Pellentesque vel massa ac massa ullamcorper hendrerit sed in velit. Curabitur tincidunt, felis ut facilisis finibus, sem quam ornare nisl, quis tempus lacus dolor sed turpis. Proin rhoncus ultrices porta. Integer eget eros sit amet ante hendrerit auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus vel quam non turpis vehicula pharetra non venenatis sapien. Donec orci eros, congue eu nunc nec, pharetra tempus est. Pellentesque efficitur egestas enim in vehicula.
@@ -165,11 +175,11 @@ class HomePage extends React.Component {
                 {/* ==================Start Contact============== */}
                 <section className='contact' id='contact_section'>
                     <div className='row'>
-                        <div className='col-md-12 section-title'>
+                        <div className='col-12 section-title'>
                             <h1>Contact</h1>
                         </div>
-                        <div className='col-md-12 contact_me'>
-                            <form className='col-md-6' onSubmit={this.handleSubmit}>
+                        <div className='col-12 contact_me'>
+                            <form className='col-6' onSubmit={this.handleSubmit}>
                                 <div className='form-group'>
                                     <label htmlFor='name'>Name:</label>
                                     <input type='text' className='form-control' 
