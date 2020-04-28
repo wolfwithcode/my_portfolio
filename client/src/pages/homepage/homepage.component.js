@@ -25,6 +25,7 @@ class HomePage extends React.Component {
         super();
         this.state = {
             skills: SKILLS_DATA,
+            isLoading: false,
             name: '',
             email: '',
             phone: '',
@@ -42,7 +43,7 @@ class HomePage extends React.Component {
     async handleSubmit(e) {
         e.preventDefault();
         const {name, email, phone, message} = this.state;
-
+        this.setState({isLoading: true});
         await axios.post('/api/form', {
             name,
             email,
@@ -200,7 +201,10 @@ class HomePage extends React.Component {
                                     <textarea type='text' className='form-control' 
                                     id='message' name='message' rows='5' onChange={this.handleChange}></textarea>
                                 </div>  
-                                <button type='submit' className="btn btn-primary ml-auto">Send</button>  
+                                <button type='submit' className="btn btn-primary ml-auto"
+                                    disabled={this.state.isLoading}>
+                                        {this.state.isLoading ? "Loading..." : "Send"}
+                                </button>  
                             </form>
                         </div>
                     </div>
