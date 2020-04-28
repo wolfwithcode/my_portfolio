@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const path = require('path');
 
 const app = express();
 require('dotenv').config();
@@ -52,6 +53,14 @@ app.post('/api/form', (req,res) => {
             console.log('Message URL: %s', nodemailer.getTestMessageUrl(info));
         })
     })
+});
+
+// Set static folder
+app.use(express.static("client/build"));
+
+// index.html for all page routes
+app.get("/", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client", "build", "index.html"));
 });
 
 const PORT = process.env.PORT || 3001
