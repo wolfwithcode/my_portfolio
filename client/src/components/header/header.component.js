@@ -8,7 +8,7 @@ const Header = () => {
         <section className='header_nav'>
             <Navbar expand="lg" bg="light"  fixed='top'>
                 <Navbar.Brand className="nav_brand">
-                    <a href='/'>
+                    <a href='/#home'>
                         Anh's 
                         <span style={{color: '#A30B37', marginLeft: '0.5rem', fontSize: '2rem'}}>Home</span>
                     </a>                   
