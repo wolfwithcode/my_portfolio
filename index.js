@@ -27,17 +27,17 @@ app.post('/api/form', (req,res) => {
             secure:true,
             auth: {
                 type: 'OAuth2',
-                user: 'nguyenax73@gmail.com',
-                clientId: '974595913644-slfeshve8p5j4gih693clejul9adcrso.apps.googleusercontent.com',
-                clientSecret: 'jN17kSYoNNflgFS7cbufq4Td',
-                refreshToken: '1//04mZfbD4wpgHqCgYIARAAGAQSNwF-L9IrxeKNHr2ctKO9Dt3RnMyc3AMfVQgU9TCMB-LKfvqPrqlZHtOmsKCxb2hJ4O2RnGGTTVU',
-                accessToken: 'ya29.a0Ae4lvC2f-ZnJPSs7AerOIZZSAO_-xFPt_ECSMXVWG9CAD3agcpzWP9rzJU_JV-bE0jds-9sZr_gJkxN94lbKGMDqEDeuXlI3vteejGnK_ZZPYziNqjvjyunZy_A4jowMp17Xr98wPV9oNG4pJLoNFBWl8s8R8dR4l6E'           
+                user: process.env.USER_NAME,
+                clientId: process.env.CLIENT_ID,
+                clientSecret: process.env.CLIENT_SECRET,
+                refreshToken: process.env.REFRESH_TOKEN,
+                accessToken: process.env.ACCESS_TOKEN            
             }
         })
 
         let emailOptions = {
             from: req.body.email,
-            to: 'nguyenax73@gmail.com',
+            to: process.env.USER_NAME,
             subject: 'New Message From Portfolio',
             text: req.body.message,
             html: htmlEmail
