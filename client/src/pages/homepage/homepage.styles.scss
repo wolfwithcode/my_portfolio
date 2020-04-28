@@ -1,0 +1,114 @@
+.homepage {
+    overflow: hidden;
+
+    .site-banner {
+        background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        height: 400px;
+        
+    
+        .site-title {
+            font-family: 'Dancing Script', cursive;
+            padding: 120px;
+            color: #14534C;
+            width: 100%;
+            justify-content: center;
+            padding-left: 12rem;
+        }
+
+        .projects_banner {
+            justify-content: center;
+        }
+    
+    }
+    
+    .section-title {
+        height: 50px;
+        width: 100%;
+        background-color: red($color: #000000);
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        color:#A30B37;
+        padding: 2rem 0 2rem 3rem;
+    }
+
+    .experience {
+        background: url('/assets/img/background_exp.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding-bottom: 1rem;
+
+        .work-exp {
+            padding: 2rem 0 0 4rem;
+            display: flex;
+    
+            .fa-project-diagram {
+                height: 3rem;
+                background-color: red($color: #000000);
+            }
+    
+            .company {
+                padding-left: 2rem;
+            }
+        }
+    }    
+
+    .skills {
+        padding-left: 5rem;
+        padding-top: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+
+        .tech-skill {
+            display: flex;
+            margin-right: 3rem;
+        }
+    }
+
+    .about_me {
+        .about-content {
+            margin: 3rem 0rem 2rem 5rem;
+            text-align: justify;
+
+            p {
+                width: 85%;
+            }
+            
+        }
+    }
+
+    .contact {        
+        background: url('/assets/img/background_contact.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        .contact_me {
+            margin: 3rem;
+        }
+    }
+           
+    .footer {
+        height: 200px;
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        
+        .contact_details {
+            text-align: left;
+            padding-top: 2.5rem;
+            // font-family: 'Open Sans', sans-serif;
+            font-family: 'Cormorant Infant', serif;
+            color: #073B4C;
+            font-size: medium;
+
+            h4 {
+                color: #073B4C;
+                font-size: x-large;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1020px) {
+    .projects_banner{
+        display: none;
+    }
+}

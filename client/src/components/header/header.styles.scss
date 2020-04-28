@@ -1,0 +1,42 @@
+.header_nav {
+    height: 60px;
+    width: 100%;
+
+    .nav_brand a{
+        display: flex;
+        flex-direction: space-between;     
+        font-family: 'Pacifico', cursive;  
+        color: black;
+        cursor: pointer;
+
+        &:hover{    
+            color: #EF9675 !important;
+            text-decoration: none;
+        }
+    }
+
+    .menu-items{
+        display: flex;
+        flex-direction: space-between;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: x-large;
+        font-weight: 590;
+        cursor: pointer;
+        
+        .menu-item{
+            color: #14534C;
+
+            &:hover {
+                color: #DBA854;
+                text-decoration: none;
+            }
+
+            &.active {
+                color:red;
+            }
+
+        }   
+        
+    }
+
+}
