@@ -13,6 +13,7 @@ function App() {
     <div>
       <BrowserRouter>
         <div>
+          <a id="home"></a>
           <Header />
           <Switch>
             <Route exact path='/' component={HomePage} />

@@ -17,7 +17,9 @@ class Projects extends React.Component {
             <div className='project_items'>
                 {
                     this.state.projects_data.map(({id, ...otherProjectProps}) => (
-                        <ProjectCollection key={id} {...otherProjectProps} />
+                        <div className='col-sm-12 col-md-6 col-xl-4'>
+                            <ProjectCollection key={id} {...otherProjectProps} />
+                        </div>
                     ))
                 }
             </div>

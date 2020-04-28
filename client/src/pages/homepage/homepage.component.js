@@ -204,8 +204,7 @@ class HomePage extends React.Component {
                         <div className='contact_details'>                            
                             <h4>Xuân Anh Nguyễn</h4>
                             <p>Mobile <i className="fas fa-mobile-alt"></i> : 0564 715 868</p>
-                            <p>Email <i className="far fa-envelope"></i> : nguyenax73@gmail.com</p>
-                            {/* <p>Address <i class="far fa-address-book"></i> : 20 TMT13, phường Trung Mỹ Tây, Quận 12, TPHCM.</p> */}
+                            <p>Email <i className="far fa-envelope"></i> : nguyenax73@gmail.com</p>                            
                             <p>
                                 Copyright © Anh X. Nguyen. Confidential information for hiring process only.
                             </p>

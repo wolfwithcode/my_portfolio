@@ -16,7 +16,7 @@ const Header = () => {
                 <Navbar.Toggle aria-controls='basic-navbar-nav' />
                 <Navbar.Collapse id='basic-navbar-nav'>
                     <Nav className="ml-auto menu-items">
-                        <NavLink className='d-inline p-2 menu-item' smooth to='/'>Home</NavLink>
+                        <NavLink className='d-inline p-2 menu-item' smooth to='/#home'>Home</NavLink>
                         <NavLink className='d-inline p-2 menu-item' smooth to='/#projects_section'>Projects</NavLink>
                         <NavLink className='d-inline p-2 menu-item' smooth to='/#experience_section'>Experience</NavLink>
                         <NavLink className='d-inline p-2 menu-item' smooth to='/#technical_section'>Technical Skills</NavLink>
