@@ -20,13 +20,12 @@ export class Owlcarousel extends React.Component {
                             className="owl-theme"  
                             loop  
                             >  
-                            <a href='https://mayin3d.herokuapp.com/'><img alt="img1" className="img" src= {'assets/img/img1.jpg'}/></a>  
-                            <a href='/'><img alt="img2" className="img" src= {'assets/img/img2.jpg'}/></a>  
-                            <a href='/'><img alt="img3" className="img" src= {'assets/img/img4.jpg'}/></a>  
-                            <a href='/'><img alt="img4" className="img" src= {'assets/img/img3.jpg'}/></a>  
-                            <a href='/'><img alt="img5" className="img" src= {'assets/img/img5.jpg'}/></a>  
-                            <a href='/'><img alt="img6" className="img" src= {'assets/img/img6.jpg'}/></a>  
-                            <a href='/'><img alt="img7" className="img" src= {'assets/img/img7.jpg'}/></a>  
+                            <a href='https://mayin3d.herokuapp.com/'><img alt="printer3d" className="img" src= {'assets/img/printer3d.jpg'}/></a>  
+                            <a href='https://wolfwithcode.github.io/beautifulPortfolio/'><img alt="simpleportfolio" className="img" src= {'assets/img/simpleportfolio.png'}/></a>  
+                            <a href='https://flamboyant-dijkstra-a8c3ab.netlify.app/'><img alt="todolist" className="img" src= {'assets/img/todolist.png'}/></a>  
+                            <a href='https://myhomestay.netlify.app/'><img alt="img4" className="myhomestay" src= {'assets/img/myhomestay.png'}/></a>  
+                            <a href='https://lets-travel-2020.herokuapp.com/'><img alt="img5" className="letstravel" src= {'assets/img/letstravel.png'}/></a>  
+                            <a href='https://wolfwithcode.github.io/banhmyshop/'><img alt="img6" className="banhmyshop" src= {'assets/img/banhmyshop.png'}/></a>  
                         </OwlCarousel>  
                     </div>                   
                 </div>                 

@@ -71,7 +71,7 @@ class HomePage extends React.Component {
                     <div className='row'>
                         <div className="col-lg-6 col-12 site-title">
                             <h3 className="title-text">Welcome to My Portfolio!</h3>
-                            <h1 className="title-text">I am Anh Nguyen</h1>
+                            <h1 className="title-text">I am Anh Duc Le</h1>
                             <h4 className="title-text">A Full-stack Web Developer</h4>
                         </div>
                         <div className="col-lg-6 col-md-12 projects_banner">
@@ -104,29 +104,36 @@ class HomePage extends React.Component {
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>2018-present: <strong>Freelancer</strong></p>
-                                    <p>Run a small business (online shop) and done some business-web-projects.</p>
+                                    <p>2019-present: <strong>Freelancer</strong></p>
+                                    <p>Build and deploy business-web-projects for customers</p>
                                 </div>
                             </div>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>2017-2018: <strong>FECredit</strong></p>
-                                    <p>Reporting & Analysis Specialist (PL/SQL Developer)</p>
+                                    <p>2014-2019: <strong>BOSCH</strong></p>
+                                    <p>Sofware developer for Car Multimedia project</p>
                                 </div>
                             </div>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>2016: <strong>Robert Bosch Engineering</strong></p>
-                                    <p>Associate Software Engineer (C++ Developer)</p>
+                                    <p>2013-2014: <strong>W2 Solution</strong></p>
+                                    <p>Software Engineer for w2Commerce project</p>
                                 </div>
                             </div>
                             <div className='work-exp'>                                
                                 <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
                                 <div className='company'>
-                                    <p>Education: <strong>University of Cincinnati, Ohio, US</strong></p>
-                                    <p>Bachelor of Science in Applied Mathematics - Class of 2015</p>
+                                    <p>2012-2014: <strong>Lotte Data Communication Company</strong></p>
+                                    <p>Software Engineer for Lotte Cinema, Lotte Mart, Lotte Homeshopping projects</p>
+                                </div>
+                            </div>
+                            <div className='work-exp'>                                
+                                <i className="fas fa-project-diagram" style={{color: '#118AB2'}}></i>
+                                <div className='company'>
+                                    <p>Education: <strong>University of Technology, Vietnam</strong></p>
+                                    <p>Bachelor of Computer Science, Class 2007</p>
                                 </div>
                             </div>
                         </div>
@@ -163,12 +170,11 @@ class HomePage extends React.Component {
                             <h1>About Me</h1>
                         </div>
                         <div className='col-12 about-content'>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque condimentum rutrum dui, in finibus orci. Sed sed sem nec mi convallis fermentum eu sit amet libero. Proin vitae libero mattis, faucibus dolor ut, dignissim lectus. Integer feugiat nibh ac lacus blandit, vitae consectetur urna bibendum. Vestibulum vitae imperdiet libero. Ut a mauris molestie, vestibulum turpis vel, tincidunt ante. Duis ut mauris quis sem efficitur lacinia et ac turpis. Nam libero metus, pharetra vel quam ut, ullamcorper tempus ante. Maecenas ut efficitur justo. Mauris porta sodales ligula, non porttitor nisl pulvinar sed.
-
-                                Phasellus volutpat blandit ipsum eleifend vulputate. Etiam gravida tempus gravida. Sed lectus turpis, sollicitudin ac nunc ac, lacinia viverra velit. Integer quis elit sollicitudin, condimentum mi aliquet, consectetur justo. Integer vitae eros lectus. Praesent faucibus erat lectus, viverra scelerisque sem interdum maximus. Curabitur et ante ante. Pellentesque vel massa ac massa ullamcorper hendrerit sed in velit. Curabitur tincidunt, felis ut facilisis finibus, sem quam ornare nisl, quis tempus lacus dolor sed turpis. Proin rhoncus ultrices porta. Integer eget eros sit amet ante hendrerit auctor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus vel quam non turpis vehicula pharetra non venenatis sapien. Donec orci eros, congue eu nunc nec, pharetra tempus est. Pellentesque efficitur egestas enim in vehicula.
-
-                                Vivamus neque felis, malesuada vitae ornare at, blandit eget lorem. Nunc dapibus risus orci, eget vestibulum nulla luctus viverra. Maecenas lacinia luctus urna. Morbi luctus, turpis ullamcorper porttitor lobortis, nunc augue porttitor ante, eget mollis lacus lorem eu sapien. Sed id odio egestas, mattis metus in, rutrum dui. Curabitur rhoncus non ex eget convallis. Morbi sem urna, molestie eu odio sed, lacinia ultricies diam.</p>
-                        </div>
+                            <p>I am an ambitious problem solver with a passion for online businesses, and who would like to join a team of like-minded developers. </p>
+                            <p>I have much experience of creating logical and innovative solutions to complex problems. </p>
+                            <p>I have a keen interest in technology, mobile applications and user experience. As someone who takes responsibility for my own personal development, I am continually evaluating and upgrading my skills so that I stay at the cutting edge of web development. </p>
+                            <p>I am a natural problem solver, who has proven myself by successfully completing projects for IT consultancies, software houses, web design agencies, and IT departments.</p>
+                            </div>
                     </div>
                 </section>
                 {/* ==================End About Me============== */}
@@ -216,11 +222,11 @@ class HomePage extends React.Component {
                 <section className='footer' id='footer_section'>
                     <div className='col-12 copy-rights'>
                         <div className='contact_details'>                            
-                            <h4>Xuân Anh Nguyễn</h4>
-                            <p>Mobile <i className="fas fa-mobile-alt"></i> : 0564 715 868</p>
-                            <p>Email <i className="far fa-envelope"></i> : nguyenax73@gmail.com</p>                            
+                            <h4>Lê Đức Anh </h4>
+                            <p>Mobile <i className="fas fa-mobile-alt"></i> : 033.303.7357</p>
+                            <p>Email <i className="far fa-envelope"></i> : manwithcode@live.com</p>                            
                             <p>
-                                Copyright © Anh X. Nguyen. Confidential information for hiring process only.
+                                Copyright © Anh Duc Le. Confidential information for hiring process only.
                             </p>
                         </div> 
                     </div>
