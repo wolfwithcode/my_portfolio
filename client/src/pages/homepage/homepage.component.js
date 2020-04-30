@@ -143,7 +143,7 @@ class HomePage extends React.Component {
 
                 {/* ==================Start Technical Knowledge============== */}
 
-                <section className='technical' id='technical_section'>
+                {/* <section className='technical' id='technical_section'>
                     <div className='row'>
                         <div className='col-12 section-title'>
                             <h1>Technical Skills</h1>
@@ -160,78 +160,101 @@ class HomePage extends React.Component {
                             ))}
                         </div> 
                     </div>
-                </section>
+                </section> */}
                 {/* ==================End Technical Knowledge============== */}
 
                 {/* ==================Start About Me============== */}
                 <section className='about_me' id='about_me_section'>
                     <div className='row'>
-                        <div className='col-12 section-title'>
-                            <h1>About Me</h1>
-                        </div>
-                        <div className='col-12 about-content'>
-                            <p>I am an ambitious problem solver with a passion for online businesses, and who would like to join a team of like-minded developers. </p>
-                            <p>I have much experience of creating logical and innovative solutions to complex problems. </p>
-                            <p>I have a keen interest in technology, mobile applications and user experience. As someone who takes responsibility for my own personal development, I am continually evaluating and upgrading my skills so that I stay at the cutting edge of web development. </p>
-                            <p>I am a natural problem solver, who has proven myself by successfully completing projects for IT consultancies, software houses, web design agencies, and IT departments.</p>
+                        <div className='col'>
+                            <div className='col-12 section-title'>
+                                <h1>About Me</h1>
                             </div>
+                            <div className='col-12 about-content'>
+                                <p>I am an ambitious problem solver with a passion for online businesses, and who would like to join a team of like-minded developers. </p>
+                                <p>I have much experience of creating logical and innovative solutions to complex problems. </p>
+                                <p>I have a keen interest in technology, mobile applications and user experience. As someone who takes responsibility for my own personal development, I am continually evaluating and upgrading my skills so that I stay at the cutting edge of web development. </p>
+                                <p>I am a natural problem solver, who has proven myself by successfully completing projects for IT consultancies, software houses, web design agencies, and IT departments.</p>
+                            </div>
+                        </div>
+
+                        <div className='col'>
+                            <div className='col-12 section-title'>
+                                <h1>Technical Skills</h1>
+                            </div>
+                            <div className='col-12 skills'> 
+                                {this.state.skills.map((skill, index) => (
+                                    <StyleRoot key={index} >
+                                        <div className='tech-skill d-inline-block' style={styles.bounce}>
+                                            <i className="fas fa-tags"></i>
+                                            <p>{skill}</p>
+                                        </div>   
+                                    </StyleRoot>
+                                
+                                ))}
+                            </div> 
+                        </div>
+                        
                     </div>
                 </section>
                 {/* ==================End About Me============== */}
 
                 {/* ==================Start Contact============== */}
                 <section className='contact' id='contact_section'>
-                    <div className='row'>
-                        <div className='col-12 section-title'>
-                            <h1>Contact</h1>
+                    <div className="row">                    
+                        <div className='col'>
+                            <div className='col-12 copy-rights'>
+                                <div className='contact_details'>         
+                                    <br />
+                                    <br />                   
+                                    <h4>Lê Đức Anh </h4>
+                                    <p>Mobile <i className="fas fa-mobile-alt"></i> : 033.303.7357</p>
+                                    <p>Email <i className="far fa-envelope"></i> : manwithcode@live.com</p>                            
+                                    <p>
+                                        Copyright © Anh Duc Le. Confidential information for hiring process only.
+                                    </p>
+                                </div> 
+                            </div>                
                         </div>
-                        <div className='col-12 contact_me'>
-                            <form className='col-6' onSubmit={this.handleSubmit}>
-                                <div className='form-group'>
-                                    <label htmlFor='name'>Name:</label>
-                                    <input type='text' className='form-control' 
-                                    id='name' name='name' onChange={this.handleChange}></input>
+                        <div className='col'>
+                            <div className='col-12 section-title'>
+                                    <h1>Contact</h1>
                                 </div>
-                                <div className='form-group'>
-                                    <label htmlFor='email'>Email:</label>
-                                    <input type='email' className='form-control' 
-                                    id='email' name='email' onChange={this.handleChange}></input>
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor='phone'>Phone Number:</label>
-                                    <input type='number' className='form-control' 
-                                    id='phone' name='phone' onChange={this.handleChange}></input>
-                                </div>
-                                <div className='form-group'>
-                                    <label htmlFor='message'>Message:</label>
-                                    <textarea type='text' className='form-control' 
-                                    id='message' name='message' rows='5' onChange={this.handleChange}></textarea>
-                                </div>  
-                                <button type='submit' className="btn btn-primary ml-auto"
-                                    disabled={this.state.isLoading}>
-                                        {this.state.isLoading ? "Loading..." : "Send"}
-                                </button>  
-                            </form>
+                            <div className='col-12 contact_me'>
+                                    <form className='col-6' onSubmit={this.handleSubmit}>
+                                        <div className='form-group'>
+                                            <label htmlFor='name'>Name:</label>
+                                            <input type='text' className='form-control' 
+                                            id='name' name='name' onChange={this.handleChange}></input>
+                                        </div>
+                                        <div className='form-group'>
+                                            <label htmlFor='email'>Email:</label>
+                                            <input type='email' className='form-control' 
+                                            id='email' name='email' onChange={this.handleChange}></input>
+                                        </div>
+                                        <div className='form-group'>
+                                            <label htmlFor='phone'>Phone Number:</label>
+                                            <input type='number' className='form-control' 
+                                            id='phone' name='phone' onChange={this.handleChange}></input>
+                                        </div>
+                                        <div className='form-group'>
+                                            <label htmlFor='message'>Message:</label>
+                                            <textarea type='text' className='form-control' 
+                                            id='message' name='message' rows='5' onChange={this.handleChange}></textarea>
+                                        </div>  
+                                        <button type='submit' className="btn btn-primary ml-auto"
+                                            disabled={this.state.isLoading}>
+                                                {this.state.isLoading ? "Loading..." : "Send"}
+                                        </button>  
+                                    </form>
+                                </div>                                    
                         </div>
-                    </div>
+                    </div>                    
                 </section>
                 {/* ==================End Contact============== */}
 
 
-                {/* ==================Start Footer============== */}
-                <section className='footer' id='footer_section'>
-                    <div className='col-12 copy-rights'>
-                        <div className='contact_details'>                            
-                            <h4>Lê Đức Anh </h4>
-                            <p>Mobile <i className="fas fa-mobile-alt"></i> : 033.303.7357</p>
-                            <p>Email <i className="far fa-envelope"></i> : manwithcode@live.com</p>                            
-                            <p>
-                                Copyright © Anh Duc Le. Confidential information for hiring process only.
-                            </p>
-                        </div> 
-                    </div>
-                </section>
-                {/* ==================End Footer============== */}
+                
             </div>
         );
     }
