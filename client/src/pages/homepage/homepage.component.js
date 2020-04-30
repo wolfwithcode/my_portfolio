@@ -70,6 +70,7 @@ class HomePage extends React.Component {
                 <section className='site-banner'>
                     <div className='row'>
                         <div className="col-lg-6 col-12 site-title">
+                            <img src="/assets/img/avatar.png" className="rounded-circle img"></img>
                             <h3 className="title-text">Welcome to My Portfolio!</h3>
                             <h1 className="title-text">I am Anh Duc Le</h1>
                             <h4 className="title-text">A Full-stack Web Developer</h4>
@@ -178,11 +179,11 @@ class HomePage extends React.Component {
                             </div>
                         </div>
 
-                        <div className='col'>
-                            <div className='col-12 section-title'>
+                        <div className='col' >
+                            <div className='col-12 section-title' >
                                 <h1>Technical Skills</h1>
                             </div>
-                            <div className='col-12 skills'> 
+                            <div className='col-12 skills' id='technical_section'> 
                                 {this.state.skills.map((skill, index) => (
                                     <StyleRoot key={index} >
                                         <div className='tech-skill d-inline-block' style={styles.bounce}>
@@ -204,7 +205,7 @@ class HomePage extends React.Component {
                     <div className="row">                    
                         <div className='col'>
                             <div className='col-12 copy-rights'>
-                                <div className='contact_details'>         
+                                <div className='contact_details text-center'>         
                                     <br />
                                     <br />                   
                                     <h4>Lê Đức Anh </h4>
@@ -220,7 +221,7 @@ class HomePage extends React.Component {
                             <div className='col-12 section-title'>
                                     <h1>Contact</h1>
                                 </div>
-                            <div className='col-12 contact_me'>
+                            <div className='col-12 contact_me' >
                                     <form className='col-6' onSubmit={this.handleSubmit}>
                                         <div className='form-group'>
                                             <label htmlFor='name'>Name:</label>
