@@ -172,10 +172,10 @@ class HomePage extends React.Component {
                                 <h1>About Me</h1>
                             </div>
                             <div className='col-12 about-content'>
-                                <p>I am an ambitious problem solver with a passion for online businesses, and who would like to join a team of like-minded developers. </p>
-                                <p>I have much experience of creating logical and innovative solutions to complex problems. </p>
-                                <p>I have a keen interest in technology, mobile applications and user experience. As someone who takes responsibility for my own personal development, I am continually evaluating and upgrading my skills so that I stay at the cutting edge of web development. </p>
-                                <p>I am a natural problem solver, who has proven myself by successfully completing projects for IT consultancies, software houses, web design agencies, and IT departments.</p>
+                                <p>Ambitious problem solver with a passion for online businesses and open-minded developer. </p>
+                                <p>Having much experience of creating logical and innovative solutions to complex problems. </p>
+                                <p>Keeping interest in technology, mobile applications and user experience. Take responsibility for my own personal development, I am continually evaluating and upgrading my skills so that I stay at the cutting edge of web development. </p>
+                                <p>A natural problem solver, who has proven myself by successfully completing projects for IT consultancies, software houses, web design agencies, and IT departments.</p>
                             </div>
                         </div>
 
